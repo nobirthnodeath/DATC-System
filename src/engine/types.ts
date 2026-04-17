@@ -142,11 +142,16 @@ export type EntrySource = {
 export type ResolveInput = {
   user: User
   surface: Surface
-  context: ContentContext
-  entry_source: EntrySource
+  contentContext: ContentContext
+  entrySource: EntrySource
   campaigns: Campaign[]
   /** Optional: override "now" for deterministic demos. */
   now?: Date
+}
+
+export type ResolveOutput = {
+  resolvedAsk: ResolvedAsk
+  decisionLog: DecisionLog
 }
 
 export type FilterResult = {
